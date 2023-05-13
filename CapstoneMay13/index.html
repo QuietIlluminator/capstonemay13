@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+
+
+<head>
+
+
+  <!-- Montserrat normal font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+
+  <!-- Lato Heading font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+
+
+  <!-- Cinzel Heading Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+
+
+  <!-- Roboto timeline font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="script" href="script.js">
+
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  
+
+  <style>
+    svg rect {
+      fill: skyblue;
+      margin: 100px
+    }
+
+
+    svg text {
+      fill: black;
+      font: 11px sans-serif;
+      text-anchor: end;
+    }
+  </style>
+
+
+  <script>
+    /*async function load() {
+      const model = await tf.loadLayersModel('https://raw.githubusercontent.com/QuietIlluminator/Capstone/a9df64a59128d0cc48ed9e6eef6d1a8a99c62720/model.json');
+      return model;
+    };
+
+
+    function predict(model) {
+      // code to connect to the <input> given value will go here (just not yet)
+
+
+      const temp1 = document.getElementById('temp').value
+      // const image1 = document.getElementById('image').value
+
+
+
+
+
+
+      // const temp = (parseInt(temp1));
+      const image = ([parseInt(image1)]);
+
+
+
+
+      //alert(((tf.tensor([temp, pressure, humidity, wind_speed, rain_1h, rain_3h, snow_3h, clouds_all]))))
+
+
+      // now lets make the prediction
+      model.then(model => {
+        var costest = 0
+        let result = model.predict(tf.tensor([[image]]));  // make prediction
+        //alert(result); creates pop-up
+        const values = result.dataSync();
+        const arr = Array.from(values)
+        if (arr[0] - 57.87 > 0) {
+          var costest = (Math.round((arr[0] - 57.87) * 100) / 100) + " over"
+        } else {
+          var costest = (Math.round((57.87 - arr[0]) * 100) / 100) + " under"
+        }
+        if (arr[1] - 11688.96 > 0) {
+          var enest = (Math.round((arr[1] - 11688.96) * 100) / 100) + " over"
+          var ver = "overhaul"
+        } else {
+          var enest = (Math.round((11688.96 - arr[1]) * 100) / 100) + " under"
+          var ver = "underhaul"
+        }
+
+
+        
+        */
+        const model = load(); */
+  </script>
+
+
+  <title>LesionIdentificationScanner.ai</title>
+</head>
+
+
+<body>
+  <main id="main">
+    <article class="article-container">
+
+
+      <div class="img-title">
+        <div class="title-line">
+          <h1 class="title-line" id="title">Lesion Identification Scanner</h1>
+          <h2 class="title-line" id="info">An AI driven tool to accurately classify and detect lesions, especially
+            melanoma.
+          </h2>
+        </div>
+      </div>
+
+
+      <div class="image-container" id="image1">
+      </div>
+
+
+      <div id="product-test">
+        <p id="product-test-words">Try our product out here! </p>
+        <form class="form">
+          <!-- <input type="text" id="temp" name="temp" placeholder="Temperature (K)" required><br><br> -->
+          //<!-- displays the file -->
+          <input type="file" id="image" name="image" placeholder="Image" required><br><br>
+
+
+          <center><button onclick="predict(model)" type="button">Predict</button></center><br>
+          <br><br>
+          <br><br>
+          <br><br>
+          <center><label for="classification" class="label">Predicted lesion:</label>
+          </center>
+          <br><br>
+          <br><br>
+          <br><br>
+        </form>
+
+
+
+
+      </div>
+
+      <div class="image-container" id="image3">
+      </div>
+
+
+
+
+    </article>
+  </main>
+</body>
+<footer>
+  <div class="footer-holder">
+    <p class="footer-text">Created by Masumi Chhabria and Pragya Singh.</p>
+    <p class="footer-text">2023</p>
+  </div>
+</footer>
+
+
+
+
+
